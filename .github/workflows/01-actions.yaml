@@ -23,5 +23,5 @@ jobs:
 
             - name: Smoke Test
               run: |
-                sleep 5
+                sleep 60
                 curl http://localhost:5000/health
