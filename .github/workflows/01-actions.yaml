@@ -20,8 +20,13 @@ jobs:
               run: |
                 sleep 10
                 docker ps
+            - name: Container Status
+              run: docker ps -a
+
+            - name: Check container logs
+              run: docker logs cwvj-flask-container
 
             - name: Smoke Test
               run: |
-                sleep 60
+                sleep 3
                 curl http://localhost:5000/health
