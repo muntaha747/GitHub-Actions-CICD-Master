@@ -1,6 +1,8 @@
 name: 01 - CWVJ Flask pipeline
 on:
     push:
+      branches: ["main"]
+    workflow_dispatch:
 
 jobs:
     flask-ci-jobs:
