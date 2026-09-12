@@ -25,8 +25,6 @@ jobs:
             - name: Container Status
               run: docker ps -a
 
-            - name: Check container logs
-              run: docker logs cwvj-flask-container
 
             - name: Smoke Test
               run: |
