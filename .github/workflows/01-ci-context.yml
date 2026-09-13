@@ -1,12 +1,12 @@
-name: "01-ci-contexts.yml"
-on: 
-    push:
-      branches: "main"
+# name: "01-ci-contexts.yml"
+# on: 
+#     push:
+#       branches: "main"
 
 
-jobs:
-    event-info-job:
-            runs-on: ubuntu-latest
-            steps:
-                - name: Print Trigger Event
-                  run: echo "My trigger event is ${{ github.event_name }} event"
+# jobs:
+#     event-info-job:
+#             runs-on: ubuntu-latest
+#             steps:
+#                 - name: Print Trigger Event
+#                   run: echo "My trigger event is ${{ github.event_name }} event"

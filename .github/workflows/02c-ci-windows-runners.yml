@@ -1,36 +1,36 @@
-name: "02c-ci-windows-runners.yml"
-on: 
-  push:
-    branches: "main"
+# name: "02c-ci-windows-runners.yml"
+# on: 
+#   push:
+#     branches: "main"
 
    
       
 
-jobs:
-    Linux-runner-Job:
-        runs-on: ubuntu-latest
-        steps:
-          - name: Print Windows runner details.
-            run: |
-              echo "Workflow is executing on the GitHub-Hosted-Runner"
-              echo "Runner name: $RUNNER_NAME"
-              echo "Runner OS: $RUNNER_OS"
-              echo "Runner Architecture: $RUNNER_ARCH"
-              echo "Runner Name: $RUNNER_NAME"
-              echo "Runner Env: $RUNNER_ENVIRONMENT"
+# jobs:
+#     Linux-runner-Job:
+#         runs-on: ubuntu-latest
+#         steps:
+#           - name: Print Windows runner details.
+#             run: |
+#               echo "Workflow is executing on the GitHub-Hosted-Runner"
+#               echo "Runner name: $RUNNER_NAME"
+#               echo "Runner OS: $RUNNER_OS"
+#               echo "Runner Architecture: $RUNNER_ARCH"
+#               echo "Runner Name: $RUNNER_NAME"
+#               echo "Runner Env: $RUNNER_ENVIRONMENT"
 
 
 
 
-    Windows-runner-Job:
-        runs-on: windows-latest
-        steps:
-          - name: Print Windows runner details.
-            shell: bash
-            run: |
-              echo "Workflow is executing on the GitHub-Hosted-Runner"
-              echo "Runner name: $RUNNER_NAME"
-              echo "Runner OS: $RUNNER_OS"
-              echo "Runner Architecture: $RUNNER_ARCH"
-              echo "Runner Name: $RUNNER_NAME"
-              echo "Runner Env: $RUNNER_ENVIRONMENT"
+#     Windows-runner-Job:
+#         runs-on: windows-latest
+#         steps:
+#           - name: Print Windows runner details.
+#             shell: bash
+#             run: |
+#               echo "Workflow is executing on the GitHub-Hosted-Runner"
+#               echo "Runner name: $RUNNER_NAME"
+#               echo "Runner OS: $RUNNER_OS"
+#               echo "Runner Architecture: $RUNNER_ARCH"
+#               echo "Runner Name: $RUNNER_NAME"
+#               echo "Runner Env: $RUNNER_ENVIRONMENT"
