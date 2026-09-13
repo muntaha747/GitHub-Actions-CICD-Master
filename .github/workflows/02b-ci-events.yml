@@ -5,12 +5,9 @@ on:
     workflow_dispatch:
     push:
       branches: "main"
-      paths:
-        - "02-Workflow-Triggers/**"
     pull_request:
       branches: "main"
-      paths:
-        - "02-Workflow-Triggers/**"
+
     schedule:
         - cron: "*/7 * * * *"
 
