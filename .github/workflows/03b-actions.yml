@@ -1,44 +1,44 @@
-name: "03b-actions.yml"
-on:
-    push:
-      branches: ["main"]
+# name: "03b-actions.yml"
+# on:
+#     push:
+#       branches: ["main"]
 
 
-jobs:
-    flask-ci-jobs:
-        runs-on: ubuntu-latest
+# jobs:
+#     flask-ci-jobs:
+#         runs-on: ubuntu-latest
 
-        steps:
-            - name: Step 1 Checkout repository
-              uses: actions/checkout@v6
+#         steps:
+#             - name: Step 1 Checkout repository
+#               uses: actions/checkout@v6
 
-            - name: Step 2 Logging in to DockerHub Account
-              uses: docker/login-action@v4
-              with:
-                username: ${{ secrets.DOCKERHUB_USERNAME }}
-                password: ${{ secrets.DOCKERHUB_TOKEN }} 
+#             - name: Step 2 Logging in to DockerHub Account
+#               uses: docker/login-action@v4
+#               with:
+#                 username: ${{ secrets.DOCKERHUB_USERNAME }}
+#                 password: ${{ secrets.DOCKERHUB_TOKEN }} 
 
-            - name: Step 3 Build and push
-              uses: docker/build-push-action@v7
-              with:
-                context: .
-                file: ./Dockerfile.1
-                push: true
-                tags: muntaha747/cwvj-flask-app:v1.0.0
+#             - name: Step 3 Build and push
+#               uses: docker/build-push-action@v7
+#               with:
+#                 context: .
+#                 file: ./Dockerfile.1
+#                 push: true
+#                 tags: muntaha747/cwvj-flask-app:v1.0.0
 
-            - name: Step 4 Run the Container
-              run: docker run -d -p 5000:5000 --name cwvj-flask-container muntaha747/cwvj-flask-app:v1.0.0
+#             - name: Step 4 Run the Container
+#               run: docker run -d -p 5000:5000 --name cwvj-flask-container muntaha747/cwvj-flask-app:v1.0.0
             
-            - name: Step 5 Container Running successfully
-              run: |
-                sleep 10
-                docker ps
+#             - name: Step 5 Container Running successfully
+#               run: |
+#                 sleep 10
+#                 docker ps
 
-            - name: Step 6 Container Status
-              run: docker ps -a
+#             - name: Step 6 Container Status
+#               run: docker ps -a
 
 
-            - name: Step 7 Smoke Test
-              run: |
-                sleep 3
-                curl http://localhost:5000
+#             - name: Step 7 Smoke Test
+#               run: |
+#                 sleep 3
+#                 curl http://localhost:5000

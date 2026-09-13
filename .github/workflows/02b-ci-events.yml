@@ -1,22 +1,22 @@
-name: "02b-ci-events.yml"
+# name: "02b-ci-events.yml"
 
 
-on:
-    workflow_dispatch:
-    push:
-      branches: "main"
-    pull_request:
-      branches: "main"
+# on:
+#     workflow_dispatch:
+#     push:
+#       branches: "main"
+#     pull_request:
+#       branches: "main"
 
-    schedule:
-        - cron: "*/7 * * * *"
-
-
+#     schedule:
+#         - cron: "*/7 * * * *"
 
 
-jobs:
-    event-info-job:
-        runs-on: ubuntu-latest
-        steps:
-            - name: Print Trigger Event
-              run: echo "My trigger event is ${{ github.event_name }} event"
+
+
+# jobs:
+#     event-info-job:
+#         runs-on: ubuntu-latest
+#         steps:
+#             - name: Print Trigger Event
+#               run: echo "My trigger event is ${{ github.event_name }} event"
