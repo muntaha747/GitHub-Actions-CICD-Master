@@ -19,8 +19,10 @@ on:
       - closed
       - ready_for_review
 
+
     branches:
       - "main"
+      
 
 jobs:
   validation-job:

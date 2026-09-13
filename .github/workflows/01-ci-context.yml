@@ -5,6 +5,8 @@ on:
       paths:
         - "02-Workflow-Triggers/**" # This workflow only triggers for changes in folder 02
 
+
+        
 jobs:
     event-info-job:
             runs-on: ubuntu-latest

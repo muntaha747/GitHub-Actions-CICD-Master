@@ -1,4 +1,6 @@
 name: "02b-ci-events.yml"
+
+
 on:
     workflow_dispatch:
     push:
@@ -11,6 +13,9 @@ on:
         - "02-Workflow-Triggers/**"
     schedule:
         - cron: "*/7 * * * *"
+
+
+
 
 jobs:
     event-info-job:

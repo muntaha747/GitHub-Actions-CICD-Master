@@ -4,7 +4,9 @@ on:
     branches: "main"
     paths: 
       - "02-Workflow-Triggers/**"
-       
+   
+      
+
 jobs:
     Linux-runner-Job:
         runs-on: ubuntu-latest
@@ -18,6 +20,9 @@ jobs:
               echo "Runner Name: $RUNNER_NAME"
               echo "Runner Env: $RUNNER_ENVIRONMENT"
 
+
+
+              
     Windows-runner-Job:
         runs-on: windows-latest
         steps:
