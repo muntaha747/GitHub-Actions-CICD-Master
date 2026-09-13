@@ -1,5 +1,10 @@
 name: "04 - Windows runner"
-on: push
+on: 
+  push:
+    branches: "main"
+    paths: 
+      - "02-Workflow-Triggers/**"
+       
 jobs:
     Linux-runner-Job:
         runs-on: ubuntu-latest

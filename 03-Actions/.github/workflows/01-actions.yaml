@@ -1,32 +1,35 @@
-# name: 01 - CWVJ Flask pipeline
-# on:
-#     push:
-#       branches: ["main"]
-#     workflow_dispatch:
+name: 01 - CWVJ Flask pipeline
+on:
+    push:
+      branches: ["main"]
+      paths:
+        - "03-Actions"
+        
+    workflow_dispatch:
 
-# jobs:
-#     flask-ci-jobs:
-#         runs-on: ubuntu-latest
+jobs:
+    flask-ci-jobs:
+        runs-on: ubuntu-latest
 
-#         steps:
-#             - name: Checkout repository
-#               uses: actions/checkout@v6
+        steps:
+            - name: Checkout repository
+              uses: actions/checkout@v6
 
-#             - name: Build the Docker Image
-#               run: docker build -t cwvj-flask-app:v1.0.0 .
+            - name: Build the Docker Image
+              run: docker build -t cwvj-flask-app:v1.0.0 .
 
-#             - name: Run the Container
-#               run: docker run -d -p 5000:5000 --name cwvj-flask-container cwvj-flask-app:v1.0.0
+            - name: Run the Container
+              run: docker run -d -p 5000:5000 --name cwvj-flask-container cwvj-flask-app:v1.0.0
             
-#             - name: Container Running successfully
-#               run: |
-#                 sleep 10
-#                 docker ps
-#             - name: Container Status
-#               run: docker ps -a
+            - name: Container Running successfully
+              run: |
+                sleep 10
+                docker ps
+            - name: Container Status
+              run: docker ps -a
 
 
-#             - name: Smoke Test
-#               run: |
-#                 sleep 3
-#                 curl http://localhost:5000/health
+            - name: Smoke Test
+              run: |
+                sleep 3
+                curl http://localhost:5000/health
