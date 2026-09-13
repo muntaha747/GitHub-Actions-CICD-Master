@@ -1,4 +1,4 @@
-name: "02 - Understanding Events"
+name: "02b-ci-events.yml"
 on:
     workflow_dispatch:
     push:

@@ -1,4 +1,4 @@
-name: "03 - Understanding Runners"
+name: "02a-ci-runners.yml"
 on: 
   push:
     branches: "main"

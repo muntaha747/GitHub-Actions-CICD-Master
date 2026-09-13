@@ -1,4 +1,4 @@
-name: 01 - Production Workflow Trigger Demo
+name: "04-filter-types.yml"
 
 on:
   push:

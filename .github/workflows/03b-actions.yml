@@ -1,4 +1,4 @@
-name: 02 - CWVJ Flask WorkFlow with DockerHub logging.
+name: "03b-actions.yml"
 on:
     push:
       branches: ["main"]

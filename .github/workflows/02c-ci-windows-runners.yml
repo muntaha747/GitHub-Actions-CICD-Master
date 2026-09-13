@@ -1,4 +1,4 @@
-name: "04 - Windows runner"
+name: "02c-ci-windows-runners.yml"
 on: 
   push:
     branches: "main"
