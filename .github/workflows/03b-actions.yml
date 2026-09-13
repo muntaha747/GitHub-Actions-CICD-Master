@@ -2,10 +2,7 @@ name: "03b-actions.yml"
 on:
     push:
       branches: ["main"]
-      paths:
-        - "03-Actions"
-        
-    workflow_dispatch:
+
 
 jobs:
     flask-ci-jobs:
