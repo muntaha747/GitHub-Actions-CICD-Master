@@ -1,18 +1,18 @@
-# name: "02a-ci-runners.yml"
-# on: 
-#   push:
-#     branches: "main"
+name: "02a-ci-runners.yml"
+on: 
+  push:
+    branches: "main"
  
       
 
 
-# jobs:
-#     runner-info-job:
-#         runs-on: ubuntu-latest
-#         steps:
-#             - name: Print Runner Details
-#               run: |
-#                 echo "Workflow is executing on a Github-hosted runner."
-#                 echo "Runner Name: $RUNNER_NAME"
-#                 echo "Runner OS: $RUNNER_OS"
-#                 echo "Runner Architecture: $RUNNER_ARCH"
+jobs:
+    runner-info-job:
+        runs-on: ubuntu-latest
+        steps:
+            - name: Print Runner Details
+              run: |
+                echo "Workflow is executing on a Github-hosted runner."
+                echo "Runner Name: $RUNNER_NAME"
+                echo "Runner OS: $RUNNER_OS"
+                echo "Runner Architecture: $RUNNER_ARCH"
